@@ -1,0 +1,31 @@
+.Pot {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: 2vmin 5vmin;
+  column-gap: 5vmin;
+  margin: 0 auto;
+  color: white;
+}
+
+.Pot .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--green-8);
+  font-size: 2vmin;
+  padding-top: 0.1vmin;
+}
+
+.Pot .symbol {
+  color: var(--green-8);
+}
+
+.Pot h1 {
+  font-size: 4.5vmin;
+  font-weight: lighter;
+  margin: -0.2vmin 0 0 0;
+}
+
+.Pot h1:nth-of-type(5) {
+  font-weight: normal;
+}
