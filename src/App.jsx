@@ -8,14 +8,15 @@ import TeamGrid from './components/TeamGrid/TeamGrid';
 function App() {
   const [locked, setLocked] = useState(false);
   const [teams, setTeams] = useState([]);
+  const [buyInPot, setBuyInPot] = useState(0);
   const [activeTeam, setActiveTeam] = useState(null);
 
   useEffect(function() {
-    const { teams } = stateService.loadStateFromStorage();
+    const { teams, buyInPot } = stateService.loadStateFromStorage();
     setTeams(teams);
+    setBuyInPot(buyInPot);
   }, []);
 
-  const buyInPot = 25000;
   const auctionPot = 6500;
   return (
     <>
