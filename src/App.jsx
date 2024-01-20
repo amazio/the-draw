@@ -11,13 +11,19 @@ function App() {
   const [buyInPot, setBuyInPot] = useState(0);
   const [activeTeam, setActiveTeam] = useState(null);
 
+  let auctionPot = 0;
+
   useEffect(function() {
     const { teams, buyInPot } = stateService.loadStateFromStorage();
     setTeams(teams);
     setBuyInPot(buyInPot);
   }, []);
 
-  const auctionPot = 6500;
+  useEffect(function() {
+    auctionPot = teams.reduce((total, team) => total + team.bid, 0);
+  }, [teams]);
+
+
   return (
     <>
       <Header buyInPot={buyInPot} auctionPot={auctionPot} />
