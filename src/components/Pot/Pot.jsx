@@ -8,11 +8,11 @@ export default function Pot({ buyInPot, auctionPot }) {
       <div className='heading'>Auction</div>
       <div />
       <div className='heading'>Total Pot</div>
-      <h1>${buyInPot}</h1>
+      <h1><span className='sup'>$</span>{buyInPot}</h1>
       <h1 className='symbol'>+</h1>
-      <h1>${auctionPot}</h1>
+      <h1><span className='sup'>$</span>{auctionPot}</h1>
       <h1 className='symbol'>=</h1>
-      <h1>${(buyInPot + auctionPot)}</h1>
+      <h1><span className='sup'>$</span>{(buyInPot + auctionPot)}</h1>
     </section>
   );
 }

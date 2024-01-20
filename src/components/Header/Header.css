@@ -1,0 +1,32 @@
+.Header {
+  display: flex;
+  align-items: center;
+  background-color: var(--green-2);
+  height: 10vmin;
+}
+
+.Header .title {
+  height: 10vmin;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 35vmin;
+  background-color: var(--green-8);
+  color: #dbe0dd;
+  /* color: var(--text-green-light); */
+  font-size: 3.8vmin;
+  letter-spacing: 0.15vmin;
+}
+
+.Header .title span {
+  font-weight: lighter;
+}
+
+.Header .triangle {
+  height: 0;
+  width: 0;
+  border-top: 5vmin solid transparent;
+  border-left: 10vmin solid var(--green-8);
+  border-bottom: 5vmin solid transparent;
+}

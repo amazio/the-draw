@@ -1,12 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
-import * as teamsService from './utilities/teams-service';
+import * as stateService from './utilities/state-service';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import TeamGrid from './components/TeamGrid/TeamGrid';
 
 function App() {
-  const [teams, setTeams] = useState(teamsService.getInitialTeams());
+  const [locked, setLocked] = useState(false);
+  const [teams, setTeams] = useState([]);
   const [activeTeam, setActiveTeam] = useState(null);
+
+  useEffect(function() {
+    const { teams } = stateService.loadStateFromStorage();
+    setTeams(teams);
+  }, []);
+
   const buyInPot = 25000;
   const auctionPot = 6500;
   return (
@@ -15,7 +23,7 @@ function App() {
       <main>
         <TeamGrid teams={teams} activeTeam={activeTeam} setActiveTeam={setActiveTeam} />
       </main>
-      <footer>&copy; 2024 Amazio Software</footer>
+      <Footer locked={locked} setLocked={setLocked} />
     </>
   )
 }

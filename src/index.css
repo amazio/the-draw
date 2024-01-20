@@ -22,4 +22,9 @@ body {
   grid-template-rows: auto 1fr 5vmin;
 }
 
+.sup {
+  font-size: smaller;
+  vertical-align: top;
+}
+
 

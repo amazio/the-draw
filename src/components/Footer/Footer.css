@@ -1,0 +1,13 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--green-2);
+  font-size: 1.6vmin;
+  font-weight: normal;
+  padding: 0 1rem;
+}
+
+.Footer img {
+  cursor: pointer;
+}
