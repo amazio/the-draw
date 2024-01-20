@@ -1,0 +1,5 @@
+.Team {
+  background-color: var(--green-2);
+  border: .5vmin solid var(--green-8);
+  border-radius: .5vmin;
+}

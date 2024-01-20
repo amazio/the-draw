@@ -1,4 +1,5 @@
 .Pot {
+  font-family: 'Roboto Mono';
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-template-rows: 2vmin 5vmin;
@@ -18,14 +19,15 @@
 
 .Pot .symbol {
   color: var(--green-8);
+  font-weight: normal;
 }
 
 .Pot h1 {
   font-size: 4.5vmin;
-  font-weight: lighter;
+  font-weight: 300;
   margin: -0.2vmin 0 0 0;
 }
 
 .Pot h1:nth-of-type(5) {
-  font-weight: normal;
+  font-weight: bold;
 }

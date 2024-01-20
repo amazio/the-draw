@@ -13,7 +13,8 @@ header .title {
   align-items: center;
   width: 35vmin;
   background-color: var(--green-8);
-  color: var(--text-green-light);
+  color: #dbe0dd;
+  /* color: var(--text-green-light); */
   font-size: 3.8vmin;
   letter-spacing: 0.15vmin;
 }

@@ -1,6 +1,6 @@
 import './Pot.css';
 
-export default function Pot() {
+export default function Pot({ buyInPot, auctionPot }) {
   return (
     <section className="Pot">
       <div className='heading'>Buy-In</div>
@@ -8,11 +8,11 @@ export default function Pot() {
       <div className='heading'>Auction</div>
       <div />
       <div className='heading'>Total Pot</div>
-      <h1>$25,000</h1>
+      <h1>${buyInPot}</h1>
       <h1 className='symbol'>+</h1>
-      <h1>$4,500</h1>
+      <h1>${auctionPot}</h1>
       <h1 className='symbol'>=</h1>
-      <h1>$29,500</h1>
+      <h1>${(buyInPot + auctionPot)}</h1>
     </section>
   );
 }

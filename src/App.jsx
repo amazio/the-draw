@@ -1,16 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-import Pot from './components/Pot/Pot';
+import { useState } from 'react';
+import './App.css';
+import * as teamsService from './utilities/teams-service';
+import Header from './components/Header/Header';
+import TeamGrid from './components/TeamGrid/TeamGrid';
 
 function App() {
+  const [teams, setTeams] = useState(teamsService.getInitialTeams());
+  const [activeTeam, setActiveTeam] = useState(null);
+  const buyInPot = 25000;
+  const auctionPot = 6500;
   return (
     <>
-      <header>
-        <div className="title">THE DRAW &nbsp;2024</div>
-        <div className="triangle" />
-        <Pot />
-      </header>
-      <main>main</main>
+      <Header buyInPot={buyInPot} auctionPot={auctionPot} />
+      <main>
+        <TeamGrid teams={teams} activeTeam={activeTeam} setActiveTeam={setActiveTeam} />
+      </main>
       <footer>&copy; 2024 Amazio Software</footer>
     </>
   )
