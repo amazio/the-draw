@@ -9,9 +9,8 @@ function App() {
   const [locked, setLocked] = useState(true);
   const [teams, setTeams] = useState([]);
   const [buyInPot, setBuyInPot] = useState(0);
+  const [auctionPot, setAuctionPot] = useState(0);
   const [activeTeam, setActiveTeam] = useState(null);
-
-  let auctionPot = 0;
 
   useEffect(function() {
     const { teams, buyInPot } = stateService.loadStateFromStorage();
@@ -21,13 +20,23 @@ function App() {
   }, []);
 
   useEffect(function() {
-    auctionPot = teams.reduce((total, team) => total + team.bid, 0);
+    setAuctionPot(teams.reduce((total, team) => total + team.bid, 0));
   }, [teams]);
 
   useEffect(function() {
     if (!locked && !activeTeam) setActiveTeam(teams[0]);
   }, [locked]);
 
+  // functions
+
+  function updateBid(amt) {
+    debugger
+    const copyTeams = [...teams];
+    if (activeTeam.bid + amt >= 0) {
+      activeTeam.bid += amt;
+      setTeams(copyTeams);
+    }
+  }
 
   return (
     <>
@@ -37,6 +46,7 @@ function App() {
           teams={teams}
           activeTeam={activeTeam}
           setActiveTeam={setActiveTeam}
+          updateBid={updateBid}
           locked={locked}
         />
       </main>

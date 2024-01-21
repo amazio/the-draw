@@ -1,4 +1,6 @@
 .Team {
+  display: grid;
+  grid-template-columns: 6vmin 1fr 10vmin 10vmin;
   height: 100%;
   background-color: var(--green-1);
   border-width: 0.3vmin;
@@ -11,4 +13,21 @@
 .Team.active {
   border-color: var(--green-8);
   cursor: default;
+}
+
+.Team .TeamNum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vmin;
+  width: 5vmin;
+  border-radius: 50%;
+  background-color: var(--green-2);
+  font-size: 3vmin;
+  color: var(--green-8);
+}
+
+.Team h2 {
+  margin: 0;
+  color: white;
 }

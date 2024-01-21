@@ -2,7 +2,7 @@ import './TeamGrid.css';
 import Team from '../Team/Team';
 import Bidder from '../Bidder/Bidder';
 
-export default function TeamGrid({ teams, activeTeam, setActiveTeam, locked }) {
+export default function TeamGrid({ teams, activeTeam, setActiveTeam, updateBid, locked }) {
   const teamCards = teams.map((t) => <Team
     team={t}
     setActiveTeam={setActiveTeam}
@@ -14,7 +14,7 @@ export default function TeamGrid({ teams, activeTeam, setActiveTeam, locked }) {
     <section className="TeamGrid">
       {teamCards}
       { (!locked && activeTeam) && 
-        <Bidder activeTeam={activeTeam} />
+        <Bidder activeTeam={activeTeam} updateBid={updateBid} />
       }
     </section>
   );

@@ -10,10 +10,6 @@
   --green-8: #395d48; 
 }
 
-svg {
-  fill: #395d48;
-}
-
 body {
   margin: 0;
   height: 100vh;
@@ -24,6 +20,12 @@ body {
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr 5vmin;
+}
+
+.flex-ctr-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sup {
