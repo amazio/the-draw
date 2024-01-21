@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: .4vmin solid var(--green-8);
+  border: .3vmin solid var(--green-8);
   border-radius: .4vmin;
 }
 
