@@ -28,6 +28,13 @@ body {
   align-items: center;
 }
 
+.flex-col-ctr-ctr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .sup {
   font-size: smaller;
   vertical-align: top;

@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   useEffect(function() {
-    setAuctionPot(teams.reduce((total, team) => total + team.bid, 0));
+    setAuctionPot(teams.reduce((total, team) => total + (team.bid || 0), 0));
   }, [teams]);
 
   useEffect(function() {
@@ -30,11 +30,12 @@ function App() {
   // functions
 
   function updateBid(amt) {
-    debugger
     const copyTeams = [...teams];
+    if (activeTeam.bid === '') activeTeam.bid = 0;
     if (activeTeam.bid + amt >= 0) {
       activeTeam.bid += amt;
       setTeams(copyTeams);
+      localStorage.setItem('teams', JSON.stringify(copyTeams));
     }
   }
 

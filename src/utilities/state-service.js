@@ -21,7 +21,7 @@ export function getInitialTeams() {
       player1: '',
       player2: '',
       owners: '',
-      bid: 0,
+      bid: '',
       payouts: [0, 0, 0],
       locked: false
     }));

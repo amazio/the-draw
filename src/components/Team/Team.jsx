@@ -15,7 +15,10 @@ export default function Team({ team, setActiveTeam, isActive, locked }) {
         <h3>{team.player2}</h3>
       </div>
       <div />
-      <h2><span className='sup'>$</span>{team.bid}</h2>
+      <div className='flex-col-ctr-ctr'>
+        <div className='heading'>Bid</div>
+        <h2><span className='sup'>$</span>{team.bid}</h2>
+      </div>
     </article>
   );
 }
