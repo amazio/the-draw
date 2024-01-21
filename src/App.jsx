@@ -39,6 +39,14 @@ function App() {
     }
   }
 
+  function updatePlayers(playerNames) {
+    const copyTeams = [...teams];
+    activeTeam.player1 = playerNames.player1;
+    activeTeam.player2 = playerNames.player2;
+    setTeams(copyTeams);
+    localStorage.setItem('teams', JSON.stringify(copyTeams));
+  }
+
   return (
     <>
       <Header buyInPot={buyInPot} auctionPot={auctionPot} />
@@ -48,6 +56,7 @@ function App() {
           activeTeam={activeTeam}
           setActiveTeam={setActiveTeam}
           updateBid={updateBid}
+          updatePlayers={updatePlayers}
           locked={locked}
         />
       </main>

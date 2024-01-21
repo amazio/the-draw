@@ -1,6 +1,6 @@
 .Team {
   display: grid;
-  grid-template-columns: 6vmin 1fr 10vmin 12vmin;
+  grid-template-columns: 7vmin 1fr 10vmin 12vmin;
   height: 100%;
   background-color: var(--green-1);
   border-width: 0.3vmin;
@@ -44,4 +44,15 @@
   color: white;
   margin: 0;
   text-align: center;
+}
+
+.Team .playerNames {
+  padding: 0.5vmin 0;
+}
+
+.Team .playerNames h3 {
+  width: 100%;
+  font-size: 2.3vmin;
+  color: var(--green-8);
+  margin: 0;
 }

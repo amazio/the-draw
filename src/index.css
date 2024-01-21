@@ -35,6 +35,20 @@ body {
   align-items: center;
 }
 
+.flex-col-around-ctr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-col-around-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+
 .sup {
   font-size: smaller;
   vertical-align: top;
