@@ -8,12 +8,7 @@ export default function TeamGrid({ teams, activeTeam, setActiveTeam, locked }) {
     <section className="TeamGrid">
       {teamCards}
       { (!locked && activeTeam) && 
-          <div style={{
-            gridColumn: 2,
-            gridRow: Math.floor(activeTeam.num / 2 + 1)
-          }}>
-            <Bidder activeTeam={activeTeam} />
-          </div>
+        <Bidder activeTeam={activeTeam} />
       }
     </section>
   );

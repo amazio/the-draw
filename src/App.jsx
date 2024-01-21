@@ -17,6 +17,7 @@ function App() {
     const { teams, buyInPot } = stateService.loadStateFromStorage();
     setTeams(teams);
     setBuyInPot(buyInPot);
+    setLocked(true);
   }, []);
 
   useEffect(function() {
@@ -24,7 +25,7 @@ function App() {
   }, [teams]);
 
   useEffect(function() {
-    if (locked && !activeTeam) setActiveTeam(teams[0]);
+    if (!locked && !activeTeam) setActiveTeam(teams[0]);
   }, [locked]);
 
 

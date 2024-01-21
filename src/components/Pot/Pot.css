@@ -1,5 +1,4 @@
 .Pot {
-  font-family: 'Roboto Mono';
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-template-rows: 2vmin 5vmin;
@@ -14,6 +13,7 @@
   align-items: center;
   color: var(--green-8);
   font-size: 2vmin;
+  font-weight: bold;
   padding-top: 0.1vmin;
 }
 
@@ -23,9 +23,11 @@
 }
 
 .Pot h1 {
+  font-family: 'Roboto Mono';
   font-size: 4.5vmin;
   font-weight: 300;
   margin: -0.2vmin 0 0 0;
+  text-align: center;
 }
 
 .Pot h1:nth-of-type(5) {

@@ -1,9 +1,14 @@
 .Team {
+  height: 100%;
   background-color: var(--green-1);
-  border: .4vmin solid var(--green-4);
-  border-radius: .4vmin;
+  border-width: 0.4vmin;
+  border-style: solid;
+  border-color: var(--green-1);
+  border-radius: 0.4vmin;
+  cursor: pointer;
 }
 
 .Team.active {
-  border: .4vmin solid var(--green-8);
+  border-color: var(--green-8);
+  cursor: default;
 }
