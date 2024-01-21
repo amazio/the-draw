@@ -1,5 +1,9 @@
 .Team {
-  background-color: var(--green-2);
-  border: .5vmin solid var(--green-8);
-  border-radius: .5vmin;
+  background-color: var(--green-1);
+  border: .4vmin solid var(--green-4);
+  border-radius: .4vmin;
+}
+
+.Team.active {
+  border: .4vmin solid var(--green-8);
 }

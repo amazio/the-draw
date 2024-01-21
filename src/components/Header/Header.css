@@ -1,7 +1,7 @@
 .Header {
   display: flex;
   align-items: center;
-  background-color: var(--green-2);
+  background-color: var(--green-1);
   height: 10vmin;
 }
 
@@ -14,7 +14,6 @@
   width: 35vmin;
   background-color: var(--green-8);
   color: #dbe0dd;
-  /* color: var(--text-green-light); */
   font-size: 3.8vmin;
   letter-spacing: 0.15vmin;
 }
@@ -24,8 +23,6 @@
 }
 
 .Header .triangle {
-  height: 0;
-  width: 0;
   border-top: 5vmin solid transparent;
   border-left: 10vmin solid var(--green-8);
   border-bottom: 5vmin solid transparent;

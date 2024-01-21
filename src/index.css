@@ -4,10 +4,12 @@
 
 :root {
   --bg: #EBEEF1;
+  --green-1: #a7c6b3;
   --green-2: #8CB69C;
   --green-6: #578B6C; 
   --green-8: #395d48; 
-  --text-green-light: #a7c6b3;
+  --blue-2: #D7F9F1;
+  --blue-4: #7AA095;
 }
 
 body {
