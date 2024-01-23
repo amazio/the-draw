@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2vmin;
+  font-size: 2.2vmin;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   background-color: var(--green-2);
@@ -27,6 +27,14 @@
   margin: 0 1vmin 0 1.5vmin;
 }
 
+.Payouts .first {
+  margin-top: 1vmin;
+}
+
+.Payouts .last {
+  margin-bottom: 1vmin;
+}
+
 .Payouts h1 {
   display: flex;
   justify-content: flex-end;
@@ -34,6 +42,6 @@
   font-family: 'Roboto Mono';
   font-size: 2.5vmin;
   color: white;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 1vmin;
 }
