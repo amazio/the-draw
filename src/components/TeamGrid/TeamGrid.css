@@ -1,7 +1,7 @@
 .TeamGrid {
   display: grid;
-  grid-template-columns: 35vw 20vw 35vw;
-  grid-template-rows: repeat(7, 9vmin);
+  grid-template-columns: 39vw 14vw 39vw;
+  grid-template-rows: repeat(6, 11vmin);
   gap: 2vmin;
   grid-template-areas: 
    "team-1 . team-2"
@@ -9,7 +9,6 @@
    "team-5 . team-6"
    "team-7 . team-8"
    "team-9 . team-10"
-   "team-11 . team-12"
-   "team-13 . team-14";
+   "team-11 . team-12";
   align-items: center;
 }

@@ -1,49 +1,39 @@
-.Pot {
+.Payouts {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: repeat(3, 3.8vmin);
   border: 0.4vmin solid var(--green-2);
 }
 
-.Pot .section {
+.Payouts .section {
   grid-row: span 3;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.2vmin;
-  font-weight: 500;
+  font-size: 2vmin;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   background-color: var(--green-2);
   color: var(--green-8);
 }
 
-.Pot .heading {
+.Payouts .heading {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   color: var(--green-8);
   font-size: 2.5vmin;
+  font-weight: bold;
   margin: 0 1vmin 0 1.5vmin;
 }
 
-.Pot .heading:nth-of-type(4) {
-  font-weight: bold;
-}
-
-.Pot h1 {
+.Payouts h1 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-family: 'Roboto Mono';
   font-size: 2.5vmin;
-  font-weight: 200;
-  color: var(--bg);
-  margin: 0 1vmin;
-}
-
-.Pot h1:nth-of-type(3) {
   color: white;
   font-weight: 500;
-  /* font-weight: bold; */
+  margin: 0 1vmin;
 }

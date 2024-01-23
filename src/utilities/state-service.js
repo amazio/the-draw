@@ -14,7 +14,7 @@ export function setStateInStorage({ teams, buyInPot }) {
 }
 
 export function getInitialTeams() {
-  const numTeams = 14;
+  const numTeams = 12;
   const teams = new Array(numTeams).fill(null)
     .map((_, idx) => ({
       num: idx + 1,

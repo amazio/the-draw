@@ -1,20 +1,21 @@
 .Header {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-template-rows: 14vmin;
+  /* align-items: center; */
   background-color: var(--green-1);
-  height: 10vmin;
 }
 
 .Header .title {
-  height: 10vmin;
+  height: 14vmin;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 35vmin;
+  width: 28vmin;
   background-color: var(--green-8);
   color: #dbe0dd;
-  font-size: 3.8vmin;
+  font-size: 3vmin;
   letter-spacing: 0.15vmin;
 }
 
@@ -23,7 +24,13 @@
 }
 
 .Header .triangle {
-  border-top: 5vmin solid transparent;
-  border-left: 10vmin solid var(--green-8);
-  border-bottom: 5vmin solid transparent;
+  border-top: 7vmin solid transparent;
+  border-left: 5vmin solid var(--green-8);
+  border-bottom: 7vmin solid transparent;
+}
+
+.Header .money {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }

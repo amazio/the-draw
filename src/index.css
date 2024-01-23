@@ -6,8 +6,8 @@
   --bg: #EBEEF1;
   --green-1: #a7c6b3;
   --green-2: #8CB69C;
-  --green-6: #578B6C; 
-  --green-8: #395d48; 
+  --green-6: #578B6C;
+  --green-8: #3a684e; 
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 #root {
   height: 100%;
   display: grid;
-  grid-template-rows: auto 1fr 5vmin;
+  grid-template-rows: 14vmin 1fr 5vmin;
 }
 
 .flex-ctr-ctr {

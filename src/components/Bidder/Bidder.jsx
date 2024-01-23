@@ -4,12 +4,13 @@ import PlusIcon from '../../assets/plus.svg';
 import MinusIcon from '../../assets/minus.svg';
 
 export default function Bidder({ activeTeam, updateBid }) {
-  const [bidChangeAmt, setBidChangeAmt] = useState(1000);
+  const [bidChangeAmt, setBidChangeAmt] = useState(500);
   if (!activeTeam) return null;
   const gridRow = Math.round(activeTeam?.num / 2);
+  const pointLeft = activeTeam.num % 2;
   return (
-    <div className="Bidder" style={{ gridRow }} >
-      <div className={activeTeam.num % 2 ? 'triangle' : ''} />
+    <div className='Bidder' style={{ gridRow }} >
+      <div className={pointLeft ? 'triangle' : ''} />
       <div>
         <img src={MinusIcon} alt='minus icon' onClick={() => updateBid(-1 * bidChangeAmt)} />
         <select value={bidChangeAmt} onChange={(e) => setBidChangeAmt(parseInt(e.target.value))}>
@@ -19,7 +20,7 @@ export default function Bidder({ activeTeam, updateBid }) {
         </select>
         <img src={PlusIcon} alt='plus icon' onClick={() => updateBid(bidChangeAmt)} />
       </div>
-      <div className={activeTeam.num % 2 ? '' : 'triangle'} />
+      <div className={!pointLeft ? 'triangle' : ''} />
     </div>
   );
 }
