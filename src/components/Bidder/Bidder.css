@@ -33,7 +33,7 @@
 
 .Bidder select {
   font-family: var(--bs-body-font-family);
-  font-size: 2.5vmin;
+  font-size: 2.25vmin;
   text-align: center;
   color: var(--green-8);
   border: none;
@@ -44,7 +44,7 @@
 }
 
 .Bidder img {
-  height: 4vmin;
-  width: 4vmin;
+  height: 3vmin;
+  width: 3vmin;
   cursor: pointer;
 }

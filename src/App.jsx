@@ -17,6 +17,11 @@ function App() {
     setTeams(teams);
     setBuyInPot(buyInPot);
     setLocked(true);
+    // window.addEventListener('keydown', handleKeydown);
+
+    // return function() {
+    //   window.removeEventListener('keydown', handleKeydown);
+    // };
   }, []);
 
   useEffect(function() {
@@ -45,6 +50,10 @@ function App() {
     activeTeam.owners = names.owners;
     setTeams(copyTeams);
     localStorage.setItem('teams', JSON.stringify(copyTeams));
+  }
+
+  function handleKeydown(evt) {
+    console.log(evt);
   }
 
   const winPot = Math.round((buyInPot + auctionPot) * .7);
