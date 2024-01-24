@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import './Team.css';
 
-export default function Team({ team, setActiveTeam, updatePlayers, isActive, locked }) {
-  const [playerNames, setPlayerNames] = useState({
-    player1: team.player1,
-    player2: team.player2
+export default function Team({ team, winPot, setActiveTeam, updateNames, isActive, locked }) {
+  const [names, setNames] = useState({
+    players: team.players,
+    owners: team.owners
   });
 
-  function updatePlayer(evt) {
-    const updatedPlayers = {...playerNames, [evt.target.name]: evt.target.value};
-    setPlayerNames(updatedPlayers);
-    updatePlayers(updatedPlayers);
+  function changeNames(evt) {
+    const updatedNames = {...names, [evt.target.name]: evt.target.value};
+    setNames(updatedNames);
+    updateNames(updatedNames);
   }
+
+  const label = <span>&nbsp;&nbsp;∆ Players &nbsp;&nbsp; ∇ Owner(s)</span>;
 
   return (
     <article
@@ -24,19 +26,21 @@ export default function Team({ team, setActiveTeam, updatePlayers, isActive, loc
       </div>
       { !locked && isActive ?
         <div className='flex-col-around-start playerNames'>
-          <input name='player1' value={playerNames.player1} onChange={updatePlayer} placeholder='Player Name' />
-          <input name='player2' value={playerNames.player2} onChange={updatePlayer} placeholder='Player Name' />
+          <input name='players' value={names.players} onChange={changeNames} placeholder='Players...'/>
+          <div className="labels">&nbsp;&nbsp;∆ Players &nbsp;&nbsp; ∇ Owner(s)</div>
+          <input name='owners' value={names.owners} onChange={changeNames} placeholder='Owner(s)...'/>
         </div>
         :
         <div className='flex-col-around-start playerNames'>
-          <h3>{team.player1}</h3>
-          <h3>{team.player2}</h3>
+          <h3>{team.players}&nbsp;</h3>
+          <div className="labels">{team.players || team.owners ? label : <span>&nbsp;</span>}</div>
+          <h3>{team.owners}&nbsp;</h3>
         </div>
       }
-      <div />
       <div className='flex-col-ctr-ctr'>
-        <div className='heading'>Bid</div>
-        <h2><span className='sup'>$</span>{team.bid}</h2>
+        <div className='heading'>{team.owners ? 'Sold' : 'Bid'}</div>
+        <h2>{team.bid.toLocaleString()}</h2>
+        <div className='heading'>{Math.round((winPot - team.bid)/ team.bid)}:1</div>
       </div>
     </article>
   );

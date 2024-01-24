@@ -39,24 +39,28 @@ function App() {
     }
   }
 
-  function updatePlayers(playerNames) {
+  function updateNames(names) {
+    console.log('updating names', names)
     const copyTeams = [...teams];
-    activeTeam.player1 = playerNames.player1;
-    activeTeam.player2 = playerNames.player2;
+    activeTeam.players = names.players;
+    activeTeam.owners = names.owners;
     setTeams(copyTeams);
     localStorage.setItem('teams', JSON.stringify(copyTeams));
   }
 
+  const winPot = Math.round((buyInPot + auctionPot) * .7);
+
   return (
     <>
       <Header buyInPot={buyInPot} auctionPot={auctionPot} />
-      <main>
+      <main className={`${locked ? 'locked' : ''}`}>
         <TeamGrid
           teams={teams}
+          winPot={winPot}
           activeTeam={activeTeam}
           setActiveTeam={setActiveTeam}
           updateBid={updateBid}
-          updatePlayers={updatePlayers}
+          updateNames={updateNames}
           locked={locked}
         />
       </main>

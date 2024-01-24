@@ -18,12 +18,9 @@ export function getInitialTeams() {
   const teams = new Array(numTeams).fill(null)
     .map((_, idx) => ({
       num: idx + 1,
-      player1: '',
-      player2: '',
+      players: '',
       owners: '',
-      bid: '',
-      payouts: [0, 0, 0],
-      locked: false
+      bid: 500
     }));
   return teams;
 }

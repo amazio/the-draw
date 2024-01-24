@@ -1,6 +1,6 @@
 .Team {
   display: grid;
-  grid-template-columns: 7vmin 1fr 10vmin 12vmin;
+  grid-template-columns: 8vmin 1fr 14vmin;
   height: 100%;
   background-color: var(--green-1);
   border-width: 0.3vmin;
@@ -8,6 +8,10 @@
   border-color: var(--green-1);
   border-radius: 0.4vmin;
   cursor: pointer;
+}
+
+.locked .Team {
+  cursor: default;
 }
 
 .Team.active {
@@ -19,8 +23,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vmin;
-  width: 5vmin;
+  height: 4.5vmin;
+  width: 4.5vmin;
   border-radius: 50%;
   background-color: var(--green-2);
   font-size: 3vmin;
@@ -39,7 +43,7 @@
 
 .Team h2 {
   font-family: 'Roboto Mono';
-  font-size: 3vmin;
+  font-size: 2.6vmin;
   font-weight: 400;
   color: white;
   margin: 0;
@@ -53,6 +57,29 @@
 .Team .playerNames h3 {
   width: 100%;
   font-size: 2.3vmin;
+  text-overflow: clip;
+  white-space: nowrap;
   color: var(--green-8);
   margin: 0;
+}
+
+.Team .labels {
+  font-size: 1.5vmin;
+  color: var(--green-6);
+}
+
+.Team input {
+  width: 100%;
+  font-family: var(--bs-body-font-family);
+  font-size: 2.3vmin;
+  color: var(--green-8);
+  outline: none;
+  border: none;
+  border-radius: 0.4vmin;
+  background-color: var(--green-2);
+  padding: 0;
+}
+
+.Team input::placeholder {
+  color: var(--bg);
 }
