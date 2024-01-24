@@ -17,11 +17,7 @@ function App() {
     setTeams(teams);
     setBuyInPot(buyInPot);
     setLocked(true);
-    // window.addEventListener('keydown', handleKeydown);
-
-    // return function() {
-    //   window.removeEventListener('keydown', handleKeydown);
-    // };
+    window.addEventListener('keydown', handleKeydown, Date.now());
   }, []);
 
   useEffect(function() {

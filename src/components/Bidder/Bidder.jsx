@@ -12,13 +12,13 @@ export default function Bidder({ activeTeam, updateBid }) {
     <div className='Bidder' style={{ gridRow }} >
       <div className={pointLeft ? 'triangle' : ''} />
       <div>
-        <img src={MinusIcon} alt='minus icon' onClick={() => updateBid(-1 * bidChangeAmt)} />
+        <img src={PlusIcon} alt='plus icon' onClick={() => updateBid(bidChangeAmt)} />
         <select value={bidChangeAmt} onChange={(e) => setBidChangeAmt(parseInt(e.target.value))}>
           <option value='100'>100</option>
           <option value='500'>500</option>
           <option value='1000'>1000</option>
         </select>
-        <img src={PlusIcon} alt='plus icon' onClick={() => updateBid(bidChangeAmt)} />
+        <img src={MinusIcon} alt='minus icon' onClick={() => updateBid(-1 * bidChangeAmt)} />
       </div>
       <div className={!pointLeft ? 'triangle' : ''} />
     </div>
