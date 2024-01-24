@@ -24,3 +24,8 @@ export function getInitialTeams() {
     }));
   return teams;
 }
+
+export function resetState() {
+  localStorage.removeItem('teams');
+  return loadStateFromStorage();
+}

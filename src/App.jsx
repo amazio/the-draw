@@ -49,7 +49,18 @@ function App() {
   }
 
   function handleKeydown(evt) {
-    console.log(evt);
+    console.log(evt)
+    if (evt.key === 'K' && evt.shiftKey && evt.ctrlKey) {
+      const { teams, buyInPot } = stateService.resetState();
+      setTeams(teams);
+      setBuyInPot(buyInPot);
+    } else if (evt.key === 'B' && evt.shiftKey && evt.ctrlKey) {
+      const newBuyIn = parseInt(prompt('Enter new Buy-In amount: '));
+      if (!isNaN(newBuyIn)) {
+        localStorage.setItem('buyInPot', JSON.stringify(newBuyIn));
+        setBuyInPot(newBuyIn);
+      }
+    }
   }
 
   const winPot = Math.round((buyInPot + auctionPot) * .7);
