@@ -2,7 +2,7 @@ export function loadStateFromStorage() {
   let teams = JSON.parse(localStorage.getItem('teams'));
   if (teams === null) {
     teams = getInitialTeams();
-    setStateInStorage({ teams, buyInPot: 25000 });
+    setStateInStorage({ teams, buyInPot: 20000 });
   }
   const buyInPot = JSON.parse(localStorage.getItem('buyInPot'));
   return { teams, buyInPot };
