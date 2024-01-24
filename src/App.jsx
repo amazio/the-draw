@@ -40,7 +40,6 @@ function App() {
   }
 
   function updateNames(names) {
-    console.log('updating names', names)
     const copyTeams = [...teams];
     activeTeam.players = names.players;
     activeTeam.owners = names.owners;

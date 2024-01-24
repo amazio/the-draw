@@ -1,16 +1,17 @@
 .Bidder {
   display: grid;
-  grid-template-columns: 2vmin 1fr 2vmin;
-  grid-template-rows: 5vmin;
+  grid-template-columns: 3vmin 1fr 3vmin;
+  grid-template-rows: 8vmin;
   grid-column: 2;
   background-color: var(--green-1);
+  background-color: var(--bg);
 }
 
 .Bidder div:nth-child(2) {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* border: .3vmin solid var(--green-6); */
+  border: .3vmin solid var(--green-6);
   border-radius: 0.2vmin;
 }
 
@@ -19,30 +20,31 @@
 }
 
 .Bidder div:first-child.triangle {
-  border-top: 2.5vmin solid var(--bg);
-  border-right: 2vmin solid var(--green-6);
-  border-bottom: 2.5vmin solid var(--bg);
+  border-top: 4vmin solid var(--bg);
+  border-right: 3vmin solid var(--green-8);
+  border-bottom: 4vmin solid var(--bg);
 }
 
 .Bidder div:last-child.triangle {
-  border-top: 2.5vmin solid var(--bg);
-  border-left: 2vmin solid var(--green-8);
-  border-bottom: 2.5vmin solid var(--bg);
+  border-top: 4vmin solid var(--bg);
+  border-left: 3vmin solid var(--green-8);
+  border-bottom: 4vmin solid var(--bg);
 }
 
 .Bidder select {
   font-family: var(--bs-body-font-family);
-  font-size: 2.25vmin;
+  font-size: 2.5vmin;
   text-align: center;
   color: var(--green-8);
   border: none;
   outline: none;
   background-color: var(--green-1);
+  background-color: var(--bg);
   cursor: pointer;
 }
 
 .Bidder img {
-  height: 2.25vmin;
-  width: 2.25vmin;
+  height: 4vmin;
+  width: 4vmin;
   cursor: pointer;
 }

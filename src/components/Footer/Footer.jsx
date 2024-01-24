@@ -12,8 +12,8 @@ export default function Footer({ locked, setLocked }) {
           :
           <>
             <img src={UnlockIcon} alt="Unlock Icon" onClick={() => setLocked(true)} />
-            &nbsp;&nbsp;&nbsp;
-            <img src={GearIcon} alt="Gear Icon" />
+            {/* &nbsp;&nbsp;&nbsp;
+            <img src={GearIcon} alt="Gear Icon" /> */}
           </>
         }
       </span>

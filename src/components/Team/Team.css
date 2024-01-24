@@ -23,8 +23,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4.5vmin;
-  width: 4.5vmin;
+  height: 5vmin;
+  width: 5vmin;
   border-radius: 50%;
   background-color: var(--green-2);
   font-size: 3vmin;
@@ -61,6 +61,7 @@
   white-space: nowrap;
   color: var(--green-8);
   margin: 0;
+  padding: 0.5vmin 1vmin;
 }
 
 .Team .labels {
@@ -77,7 +78,7 @@
   border: none;
   border-radius: 0.4vmin;
   background-color: var(--green-2);
-  padding: 0;
+  padding: 0 1vmin;
 }
 
 .Team input::placeholder {

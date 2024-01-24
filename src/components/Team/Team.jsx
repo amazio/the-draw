@@ -14,6 +14,7 @@ export default function Team({ team, winPot, setActiveTeam, updateNames, isActiv
   }
 
   const label = <span>&nbsp;&nbsp;∆ Players &nbsp;&nbsp; ∇ Owner(s)</span>;
+  const odds = team.bid > 0 ? `${Math.round((winPot - team.bid)/ team.bid)}:1` : 'N/A';
 
   return (
     <article
@@ -40,7 +41,7 @@ export default function Team({ team, winPot, setActiveTeam, updateNames, isActiv
       <div className='flex-col-ctr-ctr'>
         <div className='heading'>{team.owners ? 'Sold' : 'Bid'}</div>
         <h2>{team.bid.toLocaleString()}</h2>
-        <div className='heading'>{Math.round((winPot - team.bid)/ team.bid)}:1</div>
+        <div className='heading'>{odds}</div>
       </div>
     </article>
   );
