@@ -34,11 +34,13 @@ function App() {
   // functions
 
   function updateBid(amt) {
-    const copyTeams = [...teams];
-    if (activeTeam.bid === '') activeTeam.bid = 0;
     if (activeTeam.bid + amt >= 0) {
-      activeTeam.bid += amt;
+      const copyActiveTeam = {...activeTeam};
+      const copyTeams = [...teams];
+      copyTeams.splice(copyActiveTeam.num - 1, 1, copyActiveTeam);
+      copyActiveTeam.bid += amt;
       setTeams(copyTeams);
+      setActiveTeam(copyActiveTeam);
       localStorage.setItem('teams', JSON.stringify(copyTeams));
     }
   }
@@ -52,11 +54,12 @@ function App() {
   }
 
   function handleKeydown(evt) {
-    console.log(evt)
     if (evt.key === 'K' && evt.shiftKey && evt.ctrlKey) {
       const { teams, buyInPot } = stateService.resetState();
       setTeams(teams);
       setBuyInPot(buyInPot);
+      setActiveTeam(null);
+      setLocked(true);
     } else if (evt.key === 'B' && evt.shiftKey && evt.ctrlKey) {
       const newBuyIn = parseInt(prompt('Enter new Buy-In amount: '));
       if (!isNaN(newBuyIn)) {
