@@ -1,3 +1,4 @@
+
 export function loadStateFromStorage() {
   let teams = JSON.parse(localStorage.getItem('teams'));
   if (teams === null) {
